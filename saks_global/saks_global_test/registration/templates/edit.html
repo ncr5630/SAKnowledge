@@ -1,0 +1,75 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/update/{{registration.id}}">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Update Details</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Full Name:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="full_name" class="form-control" id="id_full_name" required maxlength="20" value="{{ registration.full_name }}"/>  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">E-mail Address:</label>  
+    <div class="col-sm-4">  
+        <input type="email" name="email" class="form-control" id="id_email" required maxlength="100" value="{{ registration.email }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">User Name:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="username" class="form-control" id="id_username" required maxlength="254" value="{{ registration.username }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Phone Number:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="phone_number" class="form-control" id="id_phone_number" maxlength="15" value="{{ registration.phone_number }}" />  
+    </div>  
+  </div> 
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Present Address:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="present_address" class="form-control" id="id_present_address" value="{{ registration.present_address }}" />  
+    </div>  
+  </div> 
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Permanent Address:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="permanent_address" class="form-control" id="id_permanent_address" value="{{ registration.permanent_address }}" />  
+    </div>  
+  </div> 
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">NID Number:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="nid_number" class="form-control" id="id_nid_number" maxlength="12" value="{{ registration.nid_number }}" />  
+    </div>  
+  </div> 
+
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-success">Update</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+</body>  
+</html>  
